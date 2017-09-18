@@ -16,8 +16,9 @@ function getBaseConfig(){
     }
 }
 
+const port = process.env.PORT;
 config = getBaseConfig().merge({
-    port:  new Number(process.env.PORT)
+    port:  port ? new Number(process.env.PORT): undefined
 });
 
 
