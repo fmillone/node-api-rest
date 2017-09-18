@@ -1,2 +1,2 @@
-# node-api-rest
+# node-rest-api
 Base nodejs rest api for future projects
