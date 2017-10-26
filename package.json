@@ -1,4 +1,12 @@
 {
+  "scripts": {
+    "build": "npm run compile copy-client ",
+    "compile": "tsc -p .",
+    "do": "node ./scripts/do.js",
+    "copy-client": "npm run do copy client dist/client",
+    "app": "node ./dist/start.js",
+    "app:dev": "export NODE_ENV=development; npm run app"
+  },
   "dependencies": {
     "@types/body-parser": "^1.16.5",
     "@types/compression": "0.0.34",
@@ -10,5 +18,7 @@
     "mongoose": "^4.11.11",
     "typescript": "^2.5.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "fs-extra": "^4.0.2"
+  }
 }
